@@ -43,9 +43,12 @@ export default function PostListScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      {/* ✅ 여기서 네비바 제목 바꾸기 */}
-      <Stack.Screen options={{ title: "커뮤니티" }} />
-
+      <Stack.Screen
+        options={{
+          title: "커뮤니티",
+          headerBackVisible: false, // 🔥 뒤로가기 버튼 숨기기
+        }}
+      />
       {/* 헤더 우측에 글 작성 / 로그인 버튼 */}
       <View
         style={{
